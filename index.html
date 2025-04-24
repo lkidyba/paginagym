@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymFit - Registro de Usuarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2e7d32;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1, h2 {
+            color: #388e3c;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"], 
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-color: #81c784;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        input:focus {
+            border: 2px solid #4caf50;
+            outline: none;
+        }
+
+        button:active {
+            background-color: #388e3c;
+        }
+
+        .info-box {
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid #a5d6a7;
+            background-color: #c8e6c9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GymFit</h1>
+        <p>Un gimnasio de verdad</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Horarios</a></li>
+            <li><a href="#">Instalaciones</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="banner">
+            <img src="gym1.jpg" alt="Banner del gimnasio">
+        </div>
+
+        <h2>Registro de Nuevo Usuario</h2>
+        <p>Completa el siguiente formulario para registrarte en nuestro gimnasio.</p>
+
+        <div class="info-box">
+            ¡unite ahora y cambia tu vida!
+        </div>
+
+        <form id="registro-form">
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+            </div>
+
+            <div class="form-group">
+                <label>Género:</label>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="femenino" name="genero" value="femenino">
+                <label for="femenino">Femenino</label>
+                <input type="radio" id="otro" name="genero" value="otro">
+                <label for="otro">Otro</label>
+            </div>
+
+            <div class="form-group">
+                <label for="plan">Selecciona tu plan:</label>
+                <select id="plan" name="plan" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="basico">Plan Básico - $30/mes</option>
+                    <option value="estandar">Plan Estándar - $45/mes</option>
+                    <option value="premium">Plan Premium - $60/mes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Horario preferido:</label>
+                <select id="horario" name="horario" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="manana">Mañana (7:00 - 13:00)</option>
+                    <option value="tarde">Tarde (13:00 - 20:00)</option>
+                    <option value="noche">Noche (20:00 - 23:00)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Servicios adicionales:</label>
+                <div>
+                    <input type="checkbox" id="entrenador" name="servicios" value="entrenador">
+                    <label for="entrenador">Entrenador personal</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="nutricion" name="servicios" value="nutricion">
+                    <label for="nutricion">Plan de nutrición</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="clases" name="servicios" value="clases">
+                    <label for="clases">Clases dirigidas</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
+
+            <button type="submit">Registrarme</button>
+        </form>
+    </div>
+</body>
+</html>
